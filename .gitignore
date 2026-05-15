@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+.pnpm/
+
+# Vite cache
+.vite/
+
+# IDE and editor folders
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Misc
+*.local
+
+# Optional: ignore coverage and test output
+coverage/
+
+# Optional: ignore Mac system files
+.DS_Store
+
+# Optional: ignore Windows system files
+Thumbs.db
+
+# Optional: ignore log files
+*.log
