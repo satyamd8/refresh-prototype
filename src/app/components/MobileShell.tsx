@@ -1,6 +1,13 @@
 import type React from "react";
+import { RotateCcw } from "lucide-react";
 
-export function MobileShell({ children }: { children: React.ReactNode }) {
+export function MobileShell({
+  children,
+  onReset,
+}: {
+  children: React.ReactNode;
+  onReset?: () => void;
+}) {
   return (
     <div className="min-h-screen bg-[#050508] flex items-center justify-center p-0 md:p-8">
       <div
@@ -41,6 +48,22 @@ export function MobileShell({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </div>
+        {/* Side refresh button — restarts the flow */}
+        {onReset && (
+          <button
+            onClick={onReset}
+            aria-label="Restart from beginning"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+            style={{
+              background: "rgba(20,20,24,0.7)",
+              border: "1px solid rgba(168,85,247,0.35)",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.5), 0 0 12px rgba(168,85,247,0.18)",
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            <RotateCcw className="w-3.5 h-3.5 text-purple-300" />
+          </button>
+        )}
         {children}
       </div>
     </div>
